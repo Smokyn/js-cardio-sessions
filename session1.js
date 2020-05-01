@@ -3,8 +3,38 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  return "Let's Start";
-}
+  ////////////// SOLUTION ONE
+  //   return str.split('').reverse().join('');
+  ////////////// SOLUTION TWO
+  //   let reversed = '';
+  //   for (let i = 0; i <= str.length - 1; i++) {
+  //     reversed = str[i] + reversed;
+  //   }
+  //   return reversed;
+  ///////////// SOLUTION THREE
+  //   let reversed = '';
+  //   for (let i = str.length - 1; i >= 0; i--) {
+  //     reversed += str[i];
+  //   }
+  //   return reversed;
+  ///////////// SOLUTION FOUR
+  //   let reversed = '';
+  //   for (let char of str) {
+  //     reversed = char + reversed;
+  //     console.log(char);
+  //   }
+  //   return reversed;
+  ///////////// SOLUTION FIVE
+  //   let revString = '';
+  //   str.split('').forEach((char) => {
+  //     revString = char + revString;
+  //   });
+  //   return revString;
+  ///////////// SOLUTION SIX
+//   return str.split('').reduce((revString, char) => {
+//     return char + revString;
+//   }, '');
+// }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
@@ -33,6 +63,6 @@ function maxCharacter(str) {}
 function fizzBuzz() {}
 
 // Call Function
-const output = reverseString('hello');
+const output = reverseString('cosmin');
 
 console.log(output);
