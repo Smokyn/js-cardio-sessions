@@ -2,14 +2,39 @@
 // Return a sum of all parameters entered regardless of the amount of numbers - NO ARRAYS
 // ex. addAll(2,5,6,7) === 20
 
-function addAll() {}
+function addAll(...numbers) {
+  /////// ES5 SOLUTION
+  //   var args = Array.prototype.slice.call(arguments);
+  //   var total = 0;
+  //   for (i = 0; i < args.length; i++) {
+  //     total += args[i];
+  //   }
+  //   return total;
+  /////// ES6 SOLUTION FOREACH
+  //   return numbers.reduce((acc, cur) => acc + cur);
+}
 
 // CHALLENGE 2: SUM ALL PRIMES
 // Pass in a number to loop up to and add all of the prime numbers. A prime number is a whole number greater than 1 whose only factors are 1 and itself
 // ex. sumAllPrimes(10) == 17
 
-function sumAllPrimes() {}
-
+function sumAllPrimes(num) {
+  //   let total = 0;
+  //   function checkForPrime(i) {
+  //     for (let j = 2; j < i; j++) {
+  //       if (i % j === 0) {
+  //         return false;
+  //       }
+  //     }
+  //     return true;
+  //   }
+  //   for (let i = 2; i <= num; i++) {
+  //     if (checkForPrime(i)) {
+  //       total += i;
+  //     }
+  //   }
+  //   return total;
+}
 // CHALLENGE 3: SEEK & DESTROY
 // Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
 // ex. seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']
@@ -39,3 +64,7 @@ function missingLetters() {}
 // evenOddSums([50, 60, 60, 45, 71]) == [170, 116]
 
 function evenOddSums() {}
+
+const output = sumAllPrimes(10);
+
+console.log(output);
